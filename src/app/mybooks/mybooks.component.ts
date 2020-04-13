@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { BookService } from '../partage/bookservice.service';
+import { Book } from '../partage/book.model';
+import { User } from '../partage/user.model';
 
 @Component({
   selector: 'app-mybooks',
@@ -7,12 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MybooksComponent implements OnInit {
   book : string;
-  constructor() { 
+  mybooks: User[];
+  constructor(private bookService : BookService) { 
     
   }
 
   ngOnInit(): void {
-    this.book = "Melaine Boue";
+    this.book = "Melaine Boue 2";
+    console.log('ok111');
+    this.bookService.getMyBooks().subscribe(data => this.mybooks = data);
   }
 
 }

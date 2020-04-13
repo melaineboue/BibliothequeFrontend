@@ -1,9 +1,9 @@
 {
-  "name": "emprunt-frontend",
-  "version": "0.0.0",
+  "name": "emprunt",
+  "version": "0.9.1",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --proxy-config proxy.json",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
