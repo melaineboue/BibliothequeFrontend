@@ -1,0 +1,22 @@
+<h1>addbook works!</h1>
+<div>
+    <form (ngSubmit)= "save()">
+        <div>
+            <label>Nom du livre </label>
+            <input name="name" type="text" [(ngModel)]="book.name" class="form-control" placeholder=">= 1 caractère et <= 75 caractères">
+        </div>  
+
+        <div>
+            <label>Categorie du livre </label>
+            <input name="category" type="text" [(ngModel)]="book.category" class="form-control">
+        </div> 
+
+        <div class="container-submit">
+            <input type="submit" value="Valider" class="btn btn-primary">
+        </div>
+        
+        
+    </form>
+
+    <div><button routerLink="" >Retour</button></div>
+</div>

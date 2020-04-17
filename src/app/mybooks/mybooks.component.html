@@ -1,3 +1,6 @@
-<p>mybooks works {{ book }}!</p>
-
-<div *ngFor="let user of mybooks">{{user.name}}  {{user.email}}</div>
+<div class="books-container"> 
+    <h1>Mes livres</h1>
+    <app-book [book]=book *ngFor="let book of mybooks" (refreshBooks) = "ngOnInit()"></app-book>
+    
+</div>
+<button routerLink = "add-book" >Ajouterss</button>
