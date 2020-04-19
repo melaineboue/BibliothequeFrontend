@@ -1,0 +1,10 @@
+<h1>Mes emprunts en cours</h1>
+<div >
+    <app-loan *ngFor="let loan of loans" [loan]=loan></app-loan>
+</div>
+
+<h1>Afficher les histoire d'emprunts</h1>
+
+<div >
+    <app-loan *ngFor="let loan of oldLoans" [loan]=loan (refreshLoans) = "ngOnInit()"></app-loan>
+</div>

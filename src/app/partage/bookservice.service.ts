@@ -11,14 +11,13 @@ export class BookService {
   
   
   
-  apiUrl = "localhost:8081/users/1/books/1";
-  apiUrl1 = "http://localhost:8081/users/1/books/1";
-  apiUrl2 = "localhost:8081/users";
-  apiUrl3 = "https://jsonplaceholder.typicode.com/users";
-  apiUrl4 = "http://melaineboue.com/api/formations/";
+  apiUrl = "https://jsonplaceholder.typicode.com/users";
+  apiUrl2 = "http://melaineboue.com/api/formations/";
   apiUrlCut = "/users/1/books/";
   apiDelete = "/books/";
   apiCreate = "/users/1/book";
+  apiLoanableBooks = "/users/free/";
+
   constructor(private http : HttpClient) { }
 
   getMyBooks(){
@@ -34,6 +33,11 @@ export class BookService {
   save(book: Book) {
     console.log("Save BookService");
     return this.http.post(this.apiCreate, book);
+  }
+
+  getLoanableBooks(id:number)
+  {
+    return this.http.get<Book[]>(this.apiLoanableBooks+id);
   }
 }
 

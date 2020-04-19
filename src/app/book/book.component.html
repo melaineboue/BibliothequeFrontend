@@ -2,8 +2,13 @@
     <div><img src="/assets/book1.png" ></div>
     <div>Titre : {{book.name}}</div>
     <div>Categorie : {{book.category}}</div>
-    <div>
+    <div *ngIf="isMine()" >
         <button (click)="deleteBook(book.id)"  >Supprimer</button>
     </div>
+
+    <div *ngIf="isNotMine()" >
+        <button (click)="loanBook(book.id)"  >Emprunter</button>
+    </div>
+
 </div>
 
