@@ -3,11 +3,11 @@
     <div>Titre : {{book.name}}</div>
     <div>Categorie : {{book.category}}</div>
     <div *ngIf="isMine()" >
-        <button (click)="deleteBook(book.id)"  >Supprimer</button>
+        <button (click)="deleteBook(book.id)" class="btn btn-primary" >Supprimer</button>
     </div>
 
     <div *ngIf="isNotMine()" >
-        <button (click)="loanBook(book.id)"  >Emprunter</button>
+        <button (click)="loanBook(book.id)" class="btn btn-primary" >Emprunter</button>
     </div>
 
 </div>
