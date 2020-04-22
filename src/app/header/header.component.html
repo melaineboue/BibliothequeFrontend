@@ -1,4 +1,22 @@
-<div><a routerLink="">Mes livres</a></div>
-<div><a routerLink="mes-emprunts">Mes emprunts</a></div>
-<div><a routerLink="livres-disponible">Livres disponibles</a></div> 
-<div><a routerLink="deconnecter">Se deconnecter</a></div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Emprunts</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="">Mes livres <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="mes-emprunts">Mes emprunts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="livres-disponible">Livres disponibles</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="deconnecter" >Se deconnecter</a>
+        </li>
+      </ul>
+    </div>
+</nav>
