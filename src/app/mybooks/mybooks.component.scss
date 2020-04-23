@@ -1,0 +1,18 @@
+.books-container
+{
+    .books 
+    {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 25px;
+
+        .book 
+        {
+            margin-right: 20px;
+        }
+
+        
+        
+    }
+
+}

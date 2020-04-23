@@ -1,6 +1,13 @@
-<div class="books-container"> 
-    <h1>Mes livres</h1>
-    <app-book [book]=book *ngFor="let book of mybooks" (refreshBooks) = "ngOnInit()" owner="me"></app-book>
-    
+<div class="container">
+    <div class="books-container"> 
+        <h1>Mes livres</h1>
+        <div class="books">
+            <app-book [book]=book *ngFor="let book of mybooks" (refreshBooks) = "ngOnInit()" owner="me" class="book"></app-book>
+        </div> 
+        
+        
+    </div>
+    <button routerLink = "add-book" class="btn btn-primary">Ajouter</button>
 </div>
-<button routerLink = "add-book" >Ajouter</button>
+
+<button class="btn-primary"></button>

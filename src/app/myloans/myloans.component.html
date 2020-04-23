@@ -1,10 +1,19 @@
 <h1>Mes emprunts en cours</h1>
-<div >
-    <app-loan *ngFor="let loan of loans" [loan]=loan></app-loan>
-</div>
+<div class="loans-container">
+    <div>
+        <div *ngIf="loans.length == 0" >Vous n'avez pas d'emprunts en cours</div>
+        <div class="loans" >
+            <app-loan *ngFor="let loan of loans" [loan]=loan ></app-loan>
+        </div>
+    </div>
+    
 
-<h1>Afficher les histoire d'emprunts</h1>
+    <h1>Afficher les histoire d'emprunts</h1>
 
-<div >
-    <app-loan *ngFor="let loan of oldLoans" [loan]=loan (refreshLoans) = "ngOnInit()"></app-loan>
+    <div>
+        <div *ngIf="oldLoans.length == 0"> Vous n'avez pas d'anciens emprunts</div>
+        <div class="loans"  *ngFor="let loan of oldLoans">
+            <app-loan [loan]=loan (refreshLoans) = "ngOnInit()" ></app-loan>
+        </div>
+    </div>
 </div>

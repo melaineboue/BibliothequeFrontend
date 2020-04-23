@@ -1,8 +1,8 @@
-<div class="book-container"> 
+<div class="book-element-container"> 
     <div><img src="/assets/book1.png" ></div>
     <div>Titre : {{book.name}}</div>
     <div>Categorie : {{book.category}}</div>
-    <div *ngIf="isMine()" >
+    <div *ngIf="isMine()" class="book-element">
         <button (click)="deleteBook(book.id)" class="btn btn-primary" >Supprimer</button>
     </div>
 

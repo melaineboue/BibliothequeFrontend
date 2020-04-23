@@ -14,6 +14,8 @@ export class MyloansComponent implements OnInit {
   constructor(private loanService: LoanService) { }
   
   ngOnInit(): void {
+    this.loans=[];
+    this.oldLoans=[];
     console.log("Debut ngOnInit MyLoans");
     this.loanService.getCurrentLoansFromUserId(1).subscribe((data)=>{
       this.loans = data;
