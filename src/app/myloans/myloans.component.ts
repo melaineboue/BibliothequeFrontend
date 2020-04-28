@@ -16,18 +16,12 @@ export class MyloansComponent implements OnInit {
   ngOnInit(): void {
     this.loans=[];
     this.oldLoans=[];
-    console.log("Debut ngOnInit MyLoans");
-    this.loanService.getCurrentLoansFromUserId(1).subscribe((data)=>{
+    this.loanService.getCurrentLoansFromUserId(parseInt(sessionStorage.getItem("userId"))).subscribe((data)=>{
       this.loans = data;
-      console.log("Chargement current loans");
-
     });
-    this.loanService.getOldLoansFromUserId(1).subscribe((data)=>{
+    this.loanService.getOldLoansFromUserId(parseInt(sessionStorage.getItem("userId"))).subscribe((data)=>{
       this.oldLoans = data;
-      console.log("Chargement old loans");
-
     });
-    console.log("Fin ngOnInit MyLoans");
 
   }
 

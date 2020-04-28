@@ -13,7 +13,7 @@ export class FreebooksComponent implements OnInit {
   constructor(private bookService : BookService) { }
 
   ngOnInit(): void {
-    this.bookService.getLoanableBooks(1).subscribe((data)=>{
+    this.bookService.getLoanableBooks(parseInt(sessionStorage.getItem("userId"))).subscribe((data)=>{
       this.books = data;
     });
   }

@@ -1,0 +1,33 @@
+
+<div class="adduser-container">
+    <div>
+        <div>
+            <img src="/assets/book.png" alt="" width="200">
+        </div>
+        <div class="title">Créer utilisateur</div>
+        <br>
+        <div class="form-container">
+            <form (ngSubmit)="createUser()">
+                <span>Firstname :</span>
+                <input type="text" class="form-control" name="firstname" [(ngModel)]="user.firstname">
+                
+                <span>LastName :</span>
+                <input type="text" class="form-control" name="lastname" [(ngModel)]="user.lastname">
+                
+                <span>Mail :</span>
+                <input type="text" class="form-control" name="email" [(ngModel)]="user.email">
+                
+                <span>Password :</span>
+                <input type="password" class="form-control" name="password" [(ngModel)]="user.password">
+                
+                <div class="bouton-submit">
+                    <input type="submit" class="btn btn-primary" value="Valider">
+                </div>
+
+                <div *ngIf="userCreated">Utilisateur {{user.lastname}} {{user.firstname}} a été crée </div>
+                <div *ngIf="userCreatingConflict">L'utilisateur avec email {{user.email}} existe déjà</div>
+            </form>
+        </div>
+    </div>
+
+</div>

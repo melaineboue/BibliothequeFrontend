@@ -42,7 +42,7 @@ export class BookComponent implements OnInit {
 
   loanBook(bookId:number)
   {
-    this.loanService.createLoan(1,bookId).subscribe(()=>{
+    this.loanService.createLoan(parseInt(sessionStorage.getItem("userId")),bookId).subscribe(()=>{
       this.refreshBooks.emit();
     });
 

@@ -13,9 +13,9 @@ export class BookService {
   
   apiUrl = "https://jsonplaceholder.typicode.com/users";
   apiUrl2 = "http://melaineboue.com/api/formations/";
-  apiUrlCut = "/users/1/books/";
+  apiUrlCut = "/users/"+sessionStorage.getItem("userId")+"/books/";
   apiDelete = "/books/";
-  apiCreate = "/users/1/book";
+  apiCreate = "/users/"+sessionStorage.getItem("userId")+"/book";
   apiLoanableBooks = "/users/free/";
 
   constructor(private http : HttpClient) { }

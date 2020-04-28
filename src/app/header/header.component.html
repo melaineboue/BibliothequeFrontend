@@ -4,10 +4,10 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" routerLink="">Mes livres</a>
+          <a class="nav-link" routerLink="meslivres">Mes livres</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="mes-emprunts">Mes emprunts</a>
@@ -15,9 +15,13 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="livres-disponible">Livres disponibles</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="deconnecter" >Se deconnecter</a>
+        <li class="nav-item bouton-deconnecter">
+          <a class="nav-link" (click)="deconnecter()" >Se deconnecter</a>
         </li>
+        
       </ul>
+      <span class="navbar-text">
+        {{user.firstname}} {{user.lastname}}
+      </span>
     </div>
 </nav>

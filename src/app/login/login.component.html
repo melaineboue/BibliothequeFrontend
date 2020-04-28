@@ -1,0 +1,23 @@
+
+<div class="login-container">
+    <div>
+        <div>
+            <img src="/assets/book.png" alt="" width="200">
+        </div>
+        <div class="title">Bienvenue</div>
+        <div class="form-container">
+            <form (ngSubmit)="login()">
+                <span>Mail :</span>
+                <input type="text" class="form-control" name="email" [(ngModel)]="user.email">
+                <span>Password :</span>
+                <input type="password" class="form-control" name="password" [(ngModel)]="user.password">
+                <div class="bouton-submit">
+                    <input type="submit" class="btn btn-primary" value="Connexion">
+                    <input type="button" routerLink="adduser" class="btn btn-primary" value="Créer compte">
+                </div>
+                <div *ngIf="authenticationFailed">Login ou mot de passe incorrect</div>
+            </form>
+        </div>
+    </div>
+
+</div>

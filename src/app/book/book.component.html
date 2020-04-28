@@ -7,7 +7,8 @@
     </div>
 
     <div *ngIf="isNotMine()" >
-        <button (click)="loanBook(book.id)" class="btn btn-primary" >Emprunter</button>
+        <div>Proprietaire : {{book.user.lastname}} {{book.user.firstname}} ({{book.user.email}})</div>
+        <div><button (click)="loanBook(book.id)" class="btn btn-primary" >Emprunter</button></div>
     </div>
 
 </div>

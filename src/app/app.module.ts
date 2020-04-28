@@ -13,8 +13,10 @@ import { MecoComponent } from './meco/meco.component';
 import { HeaderComponent } from './header/header.component';
 import { MyloansComponent } from './myloans/myloans.component';
 import { FreebooksComponent } from './freebooks/freebooks.component';
-import { DeconnecterComponent } from './deconnecter/deconnecter.component';
 import { LoanComponent } from './loan/loan.component';
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+import { AddUserComponent } from './add-user/add-user.component';
 
 @NgModule({
   declarations: [
@@ -26,8 +28,10 @@ import { LoanComponent } from './loan/loan.component';
     HeaderComponent,
     MyloansComponent,
     FreebooksComponent,
-    DeconnecterComponent,
-    LoanComponent
+    LoanComponent,
+    LoginComponent,
+    HomeComponent,
+    AddUserComponent
   ],
   imports: [
     BrowserModule,

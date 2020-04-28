@@ -2,7 +2,7 @@
     <div><img src="/assets/book1.png" ></div>
     <div>Titre : {{loan.book.name}}</div>
     <div>Categorie : {{loan.book.category}}</div>
-    <div>Proprietaire : <b>{{loan.lender.firstName}} {{loan.lender.lastName}}</b> ({{loan.lender.email}})</div>
+    <div>Proprietaire : <b>{{loan.lender.firstname}} {{loan.lender.lastname}}</b> ({{loan.lender.email}})</div>
     <div>Date d'emprunt : {{loan.askDate | date:'EEEE dd MMMM yyyy - HH:mm'}}</div>
     <div *ngIf="isCloturer()">
         <div>Date de clôture : {{loan.closeDate | date:'EEEE dd MMMM yyyy - HH:mm'}}</div>

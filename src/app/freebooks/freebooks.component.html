@@ -1,4 +1,12 @@
-<h1>Livres prêtable</h1>
-<div>
-    <app-book *ngFor="let book of books" [book]=book (refreshBooks)="ngOnInit()" owner="other" ></app-book>
+<div class="container">
+    <h1>Livres prêtable</h1>
+    <div class="books-container">
+        <div class="books" *ngFor="let book of books"> 
+            <app-book [book]=book (refreshBooks)="ngOnInit()" owner="other" class="book" ></app-book>
+        </div>
+        
+    </div>
 </div>
+
+
+
