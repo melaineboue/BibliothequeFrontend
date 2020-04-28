@@ -17,6 +17,9 @@ import { LoanComponent } from './loan/loan.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { AddUserComponent } from './add-user/add-user.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { SpinnerComponent } from './spinner/spinner.component'
 
 @NgModule({
   declarations: [
@@ -31,13 +34,16 @@ import { AddUserComponent } from './add-user/add-user.component';
     LoanComponent,
     LoginComponent,
     HomeComponent,
-    AddUserComponent
+    AddUserComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatProgressSpinnerModule
   ],
   providers: [BookService],
   bootstrap: [AppComponent]
